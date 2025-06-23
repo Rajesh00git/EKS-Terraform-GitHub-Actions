@@ -1,9 +1,9 @@
 terraform {
   backend "s3" {
-    bucket         = "jumpsever-bucket1"                          # S3 bucket name to store the state
+    bucket         = "jumpserver-devsecops-project"                          # S3 bucket name to store the state
     key            = "EKS-TERRAFORM-GITHUB-ACTIONS/eks/terraform.tfstate" # Path/key in S3 bucket
     region         = "us-east-1"                                   # AWS region
-    dynamodb_table = "Lock-Files"                                  # DynamoDB table for state locking
+    dynamodb_table = "Lock-Files-1"                                  # DynamoDB table for state locking
     encrypt        = true                                          # Encrypt the state file at rest
   }
 
